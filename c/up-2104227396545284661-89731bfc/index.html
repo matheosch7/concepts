@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="en">
+<head><meta name="concept-job" content="up-2104227396545284661"><meta name="robots" content="noindex,nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>151 Rock House Ridge — Senoia, GA</title>
+<meta name="description" content="Single-property listing page layout draft for 151 Rock House Ridge, Senoia, Georgia. To be rebuilt natively in Canva Websites as a reusable listing template.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700&family=Libre+Franklin:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --white:#FFFFFF; --ink:#1C2326; --pine:#33473B; --pine-2:#4C6454;
+  --stone:#EEF0EC; --line:#D5DAD4; --granite:#5E6862; --clay:#B9AE9C;
+  --display:"League Spartan",system-ui,sans-serif; --body:"Libre Franklin",system-ui,sans-serif;
+  --wrap:1200px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--white);color:var(--ink);font:400 17px/1.6 var(--body);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:3px solid var(--pine-2);outline-offset:3px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 40px}
+h1,h2,h3{font-family:var(--display);font-weight:600;letter-spacing:-.01em;line-height:1.02}
+h2{font-size:clamp(34px,4vw,52px)}
+.section{padding:96px 0}
+
+/* swap-slot photo frames */
+.photo{position:relative;overflow:hidden;background:var(--stone)}
+.photo svg.scene{position:absolute;inset:0;width:100%;height:100%}
+.slot{position:absolute;left:14px;bottom:14px;display:flex;gap:8px;align-items:center;
+  background:rgba(255,255,255,.92);color:var(--ink);font:500 12.5px/1 var(--body);padding:8px 11px;border-radius:2px}
+.slot svg{width:14px;height:14px;flex:none}
+.photo::after{content:"";position:absolute;inset:10px;border:1px dashed rgba(28,35,38,.18);pointer-events:none}
+
+/* nav */
+header.top{position:absolute;inset:0 0 auto 0;z-index:3;color:var(--white)}
+header.top .wrap{display:flex;justify-content:space-between;align-items:center;height:84px}
+.mark{font:600 19px/1 var(--display);display:flex;gap:10px;align-items:center}
+.mark span.box{width:30px;height:30px;border:1.5px solid currentColor;display:grid;place-items:center;font-size:13px}
+nav a{text-decoration:none;font-size:15px;margin-left:30px;opacity:.92}
+nav a.btn{opacity:1;border:1.5px solid var(--white);padding:10px 18px}
+
+/* hero */
+.hero{position:relative;height:min(92vh,860px);min-height:620px;color:var(--white)}
+.hero .photo{position:absolute;inset:0}
+.hero .photo::after{inset:18px;border-color:rgba(255,255,255,.28)}
+.hero .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,26,24,.45) 0%,rgba(20,26,24,0) 30%,rgba(20,26,24,0) 48%,rgba(20,26,24,.72) 100%)}
+.hero .copy{position:absolute;left:0;right:0;bottom:64px}
+.hero .status{display:inline-block;background:var(--white);color:var(--pine);font:600 14px/1 var(--body);padding:9px 13px;margin-bottom:22px}
+.hero h1{font-size:clamp(48px,6.6vw,96px)}
+.hero .city{font:500 22px/1.3 var(--body);margin-top:14px;opacity:.95}
+.hero .slot{left:auto;right:32px;bottom:auto;top:104px}
+
+/* fact strip */
+.facts{background:var(--pine);color:var(--white)}
+.facts .wrap{display:grid;grid-template-columns:1.5fr repeat(4,1fr) auto;align-items:center}
+.fact{padding:30px 26px;border-left:1px solid rgba(255,255,255,.18)}
+.fact:first-child{padding-left:0;border-left:0}
+.fact b{display:block;font:600 34px/1 var(--display)}
+.fact small{display:block;font-size:14px;opacity:.8;margin-top:8px}
+.fact.price b{font-size:42px}
+.facts .cta{background:var(--white);color:var(--pine);text-decoration:none;font:600 16px/1 var(--body);padding:18px 24px;margin-left:26px;white-space:nowrap}
+
+/* description */
+.about .wrap{display:grid;grid-template-columns:1fr 1.25fr;gap:80px;align-items:start}
+.about p.lede{font:500 24px/1.45 var(--body);margin-top:26px}
+.about .text p+p{margin-top:18px}
+.about .text p{color:#343d40}
+.highlights{margin-top:40px;border-top:1px solid var(--line)}
+.highlights li{list-style:none;display:grid;grid-template-columns:170px 1fr;gap:20px;padding:18px 0;border-bottom:1px solid var(--line)}
+.highlights li strong{font:600 17px/1.3 var(--display)}
+.highlights li span{color:var(--granite)}
+
+/* gallery */
+.gallery{background:var(--stone)}
+.gallery .head{display:flex;justify-content:space-between;align-items:end;margin-bottom:36px;gap:40px}
+.gallery .head p{max-width:420px;color:var(--granite)}
+.grid{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:150px;gap:12px}
+.grid .photo:nth-child(1){grid-column:span 8;grid-row:span 3}
+.grid .photo:nth-child(2){grid-column:span 4;grid-row:span 3}
+.grid .photo:nth-child(3){grid-column:span 4;grid-row:span 2}
+.grid .photo:nth-child(4){grid-column:span 4;grid-row:span 2}
+.grid .photo:nth-child(5){grid-column:span 4;grid-row:span 2}
+.grid .photo:nth-child(6){grid-column:span 5;grid-row:span 2}
+.grid .photo:nth-child(7){grid-column:span 7;grid-row:span 2}
+
+/* features */
+.features .cols{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:44px;border-top:2px solid var(--ink)}
+.features .col{padding:28px 32px 0 0}
+.features .col+.col{padding-left:32px;border-left:1px solid var(--line)}
+.features h3{font-size:24px;margin-bottom:16px}
+.features ul{list-style:none}
+.features li{padding:10px 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:16px}
+.features li em{font-style:normal;color:var(--granite);text-align:right}
+
+/* location */
+.location .wrap{display:grid;grid-template-columns:1.35fr 1fr;gap:64px;align-items:center}
+.map{position:relative;aspect-ratio:4/3;background:#E7EAE3;overflow:hidden}
+.map svg{width:100%;height:100%;display:block}
+.map .embed{position:absolute;right:12px;top:12px;background:var(--white);font:500 12.5px/1 var(--body);padding:8px 11px}
+.drive{margin-top:28px}
+.drive li{list-style:none;display:flex;justify-content:space-between;align-items:baseline;padding:14px 0;border-bottom:1px solid var(--line)}
+.drive li b{font:600 22px/1 var(--display);color:var(--pine)}
+
+/* agent */
+.agent{background:var(--ink);color:var(--white)}
+.agent .wrap{display:grid;grid-template-columns:300px 1fr 1fr;gap:56px;align-items:center}
+.agent .photo{aspect-ratio:4/5;background:#2B3438}
+.agent .photo::after{border-color:rgba(255,255,255,.2)}
+.agent .role{color:#B7C4BB;margin-top:10px}
+.agent .contact{margin-top:28px;display:grid;gap:10px;font-size:18px}
+.agent .contact a{text-decoration:none;border-bottom:1px solid rgba(255,255,255,.3);justify-self:start}
+.showing h3{font-size:34px}
+.showing p{color:#C9D1CC;margin:14px 0 26px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btns a{text-decoration:none;font:600 16px/1 var(--body);padding:18px 24px}
+.btns .primary{background:var(--white);color:var(--ink)}
+.btns .ghost{border:1.5px solid rgba(255,255,255,.6)}
+.open-house{margin-top:28px;padding-top:22px;border-top:1px solid rgba(255,255,255,.18);display:flex;gap:18px;align-items:baseline}
+.open-house b{font:600 20px/1 var(--display);white-space:nowrap}
+
+footer{padding:34px 0 40px;font-size:13.5px;color:var(--granite)}
+footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+
+/* build notes (for the client, not part of the live page) */
+.notes{border-top:1px solid var(--line);background:#F7F8F6;padding:44px 0 60px}
+.notes h4{font:600 20px/1.2 var(--display);margin-bottom:18px}
+.notes ol{display:grid;grid-template-columns:repeat(3,1fr);gap:14px 40px;padding-left:18px;color:#39423F;font-size:15px}
+
+@media (max-width:900px){
+  .wrap{padding:0 20px}
+  nav a:not(.btn){display:none}
+  .hero{min-height:560px;height:min(78vh,700px)}
+  .hero .slot{top:92px;right:20px}
+  .facts .wrap{grid-template-columns:repeat(2,1fr);padding:10px 20px 24px}
+  .fact{border-left:0;padding:16px 0}
+  .fact.price{grid-column:1/-1}
+  .facts .cta{grid-column:1/-1;margin:8px 0 0;text-align:center}
+  .about .wrap,.location .wrap,.agent .wrap{grid-template-columns:1fr;gap:40px}
+  .highlights li{grid-template-columns:1fr;gap:4px}
+  .grid{grid-template-columns:1fr 1fr;grid-auto-rows:130px}
+  .grid .photo:nth-child(n){grid-column:span 1;grid-row:span 1}
+  .grid .photo:nth-child(1){grid-column:1/-1;grid-row:span 2}
+  .features .cols{grid-template-columns:1fr}
+  .features .col,.features .col+.col{padding:24px 0 0;border-left:0}
+  .agent .photo{max-width:240px}
+  .notes ol{grid-template-columns:1fr}
+  .section{padding:68px 0}
+  .gallery .head{flex-direction:column;align-items:start}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="cam" viewBox="0 0 16 16"><path d="M2 5h2.6l1.2-1.8h4.4L11.4 5H14v8H2z" fill="none" stroke="currentColor" stroke-width="1.3"/><circle cx="8" cy="9" r="2.3" fill="none" stroke="currentColor" stroke-width="1.3"/></symbol>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9FB3BC"/><stop offset=".55" stop-color="#D9D7CC"/><stop offset="1" stop-color="#E9E1CF"/></linearGradient>
+    <linearGradient id="lawn" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6F7F5E"/><stop offset="1" stop-color="#46553F"/></linearGradient>
+    <linearGradient id="room" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E7E4DC"/><stop offset="1" stop-color="#C9C4B8"/></linearGradient>
+    <linearGradient id="roomdark" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#D4D8D2"/><stop offset="1" stop-color="#A8B0A8"/></linearGradient>
+  </defs>
+</svg>
+
+<header class="top">
+  <div class="wrap">
+    <div class="mark"><span class="box">151</span>Rock House Ridge</div>
+    <nav aria-label="Page sections">
+      <a href="#details">Details</a><a href="#photos">Photos</a><a href="#features">Features</a><a href="#location">Location</a><a class="btn" href="#showing">Book a showing</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- 1 · HERO -->
+<section class="hero" aria-label="Listing hero">
+  <div class="photo" role="img" aria-label="Front exterior photo placeholder">
+    <svg class="scene" viewBox="0 0 1440 860" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <rect width="1440" height="860" fill="url(#sky)"/>
+      <path d="M0 470 L40 410 L70 450 L110 380 L150 440 L190 360 L240 430 L270 395 L320 450 L360 400 L400 455 L1000 455 L1040 390 L1080 440 L1120 350 L1165 430 L1200 385 L1250 445 L1290 370 L1330 430 L1380 395 L1440 440 L1440 560 L0 560Z" fill="#4E5D4B" opacity=".85"/>
+      <path d="M0 520 L60 470 L100 505 L150 450 L200 510 L1180 510 L1230 460 L1280 500 L1340 440 L1400 495 L1440 470 L1440 600 L0 600Z" fill="#3F4C3D"/>
+      <g transform="translate(470 300)">
+        <path d="M0 150 L250 20 L500 150Z" fill="#3B4145"/>
+        <rect x="30" y="148" width="440" height="200" fill="#EDEAE2"/>
+        <path d="M300 148 L400 90 L500 148Z" fill="#33393C"/>
+        <rect x="330" y="148" width="140" height="200" fill="#E2DED4"/>
+        <rect x="60" y="300" width="380" height="48" fill="#8C8577"/>
+        <g fill="#56606A"><rect x="70" y="185" width="46" height="70"/><rect x="150" y="185" width="46" height="70"/><rect x="360" y="185" width="80" height="70"/><rect x="250" y="220" width="42" height="80" fill="#2F3A33"/></g>
+        <g fill="#8C8577"><rect x="40" y="258" width="10" height="92"/><rect x="200" y="258" width="10" height="92"/><rect x="320" y="258" width="10" height="92"/></g>
+        <rect x="30" y="252" width="440" height="8" fill="#3B4145"/>
+        <rect x="-20" y="348" width="540" height="12" fill="#A39C8C"/>
+      </g>
+      <rect y="640" width="1440" height="220" fill="url(#lawn)"/>
+      <path d="M0 660 H1440 V610 C1100 640 900 600 720 650 C540 690 300 620 0 640Z" fill="#5E6E50"/>
+      <path d="M690 660 L760 660 L900 860 L560 860Z" fill="#B5AD9C" opacity=".75"/>
+    </svg>
+    <span class="slot"><svg><use href="#cam"/></svg>Swap in: front elevation, golden hour</span>
+  </div>
+  <div class="shade"></div>
+  <div class="copy wrap">
+    <span class="status">New listing, live Thursday</span>
+    <h1>151 Rock House Ridge</h1>
+    <p class="city">Senoia, Georgia 30276 &nbsp;/&nbsp; Coweta County</p>
+  </div>
+</section>
+
+<!-- 2 · FACT STRIP -->
+<section class="facts" id="details" aria-label="Key facts">
+  <div class="wrap">
+    <div class="fact price"><b>$689,000</b><small>List price</small></div>
+    <div class="fact"><b>4</b><small>Bedrooms</small></div>
+    <div class="fact"><b>3.5</b><small>Bathrooms</small></div>
+    <div class="fact"><b>3,184</b><small>Heated sq ft</small></div>
+    <div class="fact"><b>0.71</b><small>Acre lot</small></div>
+    <a class="cta" href="#showing">Schedule a showing</a>
+  </div>
+</section>
+
+<!-- 3 · DESCRIPTION + HIGHLIGHTS -->
+<section class="section about" aria-labelledby="about-h">
+  <div class="wrap">
+    <div>
+      <h2 id="about-h">A quiet ridge, five minutes from Main Street.</h2>
+      <p class="lede">Room for everyone on one of Senoia's most private streets, with a screened porch that looks straight into the hardwoods.</p>
+    </div>
+    <div class="text">
+      <p>Set back on a wooded lot, this four-bedroom home pairs an open kitchen and family room with a main-level primary suite and a flexible bonus room upstairs. Wide-plank floors run through the main level, and the kitchen island seats five.</p>
+      <p>Out back, the screened porch steps down to a stone patio and a level, fenced yard. Downtown Senoia's shops and restaurants are an easy drive, and Peachtree City's golf-cart paths are close by.</p>
+      <ul class="highlights">
+        <li><strong>Main-level primary</strong><span>Walk-in closet, double vanity, tiled shower</span></li>
+        <li><strong>Chef's kitchen</strong><span>Quartz counters, gas range, walk-in pantry</span></li>
+        <li><strong>Screened porch</strong><span>Tongue-and-groove ceiling, stone patio below</span></li>
+        <li><strong>Three-car garage</strong><span>Side entry, extra storage and workshop space</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 4 · PHOTO GALLERY -->
+<section class="section gallery" id="photos" aria-labelledby="photos-h">
+  <div class="wrap">
+    <div class="head">
+      <h2 id="photos-h">Inside and out</h2>
+      <p>Seven fixed frames sized for a standard listing shoot. Each one is a Canva frame: drag a photo on top and it crops itself.</p>
+    </div>
+    <div class="grid">
+      <div class="photo" role="img" aria-label="Kitchen photo placeholder"><svg class="scene" viewBox="0 0 800 450" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="800" height="450" fill="url(#room)"/><rect x="0" y="300" width="800" height="150" fill="#A99C86"/><rect x="180" y="250" width="440" height="70" fill="#F4F2EC"/><rect x="190" y="320" width="420" height="80" fill="#4C6454"/><rect x="60" y="60" width="200" height="120" fill="#D9D6CC"/><rect x="540" y="60" width="200" height="120" fill="#D9D6CC"/><g fill="#2F3436"><circle cx="300" cy="120" r="14"/><circle cx="400" cy="120" r="14"/><circle cx="500" cy="120" r="14"/></g></svg><span class="slot"><svg><use href="#cam"/></svg>Kitchen from the island</span></div>
+      <div class="photo" role="img" aria-label="Family room photo placeholder"><svg class="scene" viewBox="0 0 400 450" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="400" height="450" fill="url(#roomdark)"/><rect x="120" y="80" width="160" height="200" fill="#EEF0EC"/><rect x="150" y="280" width="100" height="90" fill="#6B645A"/><rect x="0" y="370" width="400" height="80" fill="#9C9180"/></svg><span class="slot"><svg><use href="#cam"/></svg>Family room + fireplace</span></div>
+      <div class="photo" role="img" aria-label="Primary suite photo placeholder"><svg class="scene" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="400" height="300" fill="url(#room)"/><rect x="90" y="150" width="220" height="90" fill="#F7F5F0"/><rect x="90" y="120" width="220" height="36" fill="#7D8A80"/><rect y="240" width="400" height="60" fill="#A99C86"/></svg><span class="slot"><svg><use href="#cam"/></svg>Primary suite</span></div>
+      <div class="photo" role="img" aria-label="Primary bath photo placeholder"><svg class="scene" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="400" height="300" fill="#DCE0DB"/><rect x="40" y="170" width="320" height="70" fill="#F4F2EC"/><rect x="70" y="40" width="110" height="110" fill="#C3CCC7"/><rect x="220" y="40" width="110" height="110" fill="#C3CCC7"/></svg><span class="slot"><svg><use href="#cam"/></svg>Primary bath</span></div>
+      <div class="photo" role="img" aria-label="Bonus room photo placeholder"><svg class="scene" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="400" height="300" fill="url(#roomdark)"/><path d="M0 0 L200 90 L400 0Z" fill="#BFC5BE"/><rect y="230" width="400" height="70" fill="#9C9180"/></svg><span class="slot"><svg><use href="#cam"/></svg>Bonus room upstairs</span></div>
+      <div class="photo" role="img" aria-label="Screened porch photo placeholder"><svg class="scene" viewBox="0 0 500 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="500" height="300" fill="#5E6E50"/><g fill="#EDEAE2"><rect x="0" y="0" width="500" height="26"/><rect x="0" y="0" width="16" height="300"/><rect x="160" y="0" width="12" height="300"/><rect x="330" y="0" width="12" height="300"/><rect x="484" y="0" width="16" height="300"/></g><rect y="250" width="500" height="50" fill="#A39C8C"/></svg><span class="slot"><svg><use href="#cam"/></svg>Screened porch</span></div>
+      <div class="photo" role="img" aria-label="Back yard photo placeholder"><svg class="scene" viewBox="0 0 700 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="700" height="300" fill="url(#sky)"/><path d="M0 170 L60 110 L110 160 L170 90 L240 160 L300 120 L380 170 L460 100 L540 165 L620 115 L700 160 V300 H0Z" fill="#4E5D4B"/><rect y="220" width="700" height="80" fill="url(#lawn)"/></svg><span class="slot"><svg><use href="#cam"/></svg>Back yard + tree line</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 5 · FEATURES -->
+<section class="section features" id="features" aria-labelledby="features-h">
+  <div class="wrap">
+    <h2 id="features-h">Features</h2>
+    <div class="cols">
+      <div class="col"><h3>Interior</h3><ul>
+        <li>Flooring<em>Wide-plank hardwood</em></li><li>Kitchen<em>Quartz, gas range, pantry</em></li><li>Primary<em>Main level</em></li><li>Bonus room<em>Upstairs, with closet</em></li><li>Fireplace<em>Gas, family room</em></li></ul></div>
+      <div class="col"><h3>Exterior</h3><ul>
+        <li>Lot<em>0.71 acre, wooded</em></li><li>Porch<em>Screened, rear</em></li><li>Patio<em>Stone</em></li><li>Garage<em>3-car, side entry</em></li><li>Yard<em>Level, fenced</em></li></ul></div>
+      <div class="col"><h3>Property</h3><ul>
+        <li>Year built<em>2018</em></li><li>HVAC<em>Two zones</em></li><li>Utilities<em>City water, septic</em></li><li>County<em>Coweta</em></li><li>HOA<em>None</em></li></ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- 6 · LOCATION -->
+<section class="section location" id="location" aria-labelledby="loc-h" style="padding-top:0">
+  <div class="wrap">
+    <div class="map" role="img" aria-label="Map of Senoia area, placeholder for Google Maps embed">
+      <svg viewBox="0 0 640 480" aria-hidden="true">
+        <rect width="640" height="480" fill="#E7EAE3"/>
+        <path d="M-10 330 C120 300 200 360 330 320 S520 250 660 280" stroke="#C9D4DA" stroke-width="18" fill="none"/>
+        <g stroke="#FFFFFF" stroke-width="7" fill="none"><path d="M0 120 L640 170"/><path d="M180 0 L260 480"/><path d="M420 0 C400 160 470 300 440 480"/><path d="M0 420 L640 380"/></g>
+        <g stroke="#FFFFFF" stroke-width="3" fill="none"><path d="M260 200 L420 230"/><path d="M60 250 L230 280"/><path d="M300 60 L330 190"/><path d="M500 90 L620 120"/></g>
+        <g fill="#CFD6CC"><rect x="470" y="330" width="80" height="50"/><rect x="40" y="40" width="100" height="60"/><rect x="300" y="380" width="90" height="60"/></g>
+        <circle cx="352" cy="214" r="34" fill="#33473B" opacity=".14"/>
+        <path d="M352 222 c-14-16-20-26-20-34a20 20 0 0 1 40 0c0 8-6 18-20 34z" fill="#33473B"/><circle cx="352" cy="188" r="7" fill="#fff"/>
+        <text x="266" y="262" font-family="Libre Franklin" font-size="13" fill="#1C2326">151 Rock House Ridge</text>
+        <text x="455" y="60" font-family="Libre Franklin" font-size="12" fill="#5E6862">Downtown Senoia</text>
+      </svg>
+      <span class="embed">Google Maps embed</span>
+    </div>
+    <div>
+      <h2 id="loc-h">Where you'll be</h2>
+      <p style="color:var(--granite);margin-top:16px">A wooded street on the edge of Senoia, with the historic downtown, Peachtree City and the interstate all within an easy drive.</p>
+      <ul class="drive">
+        <li><span>Downtown Senoia, Main Street</span><b>5 min</b></li>
+        <li><span>Peachtree City</span><b>15 min</b></li>
+        <li><span>Newnan, Ashley Park</span><b>25 min</b></li>
+        <li><span>Hartsfield-Jackson Airport</span><b>40 min</b></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 7 · AGENT + SHOWING CTA -->
+<section class="section agent" id="showing" aria-labelledby="show-h">
+  <div class="wrap">
+    <div class="photo" role="img" aria-label="Agent headshot placeholder"><svg class="scene" viewBox="0 0 300 375" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="300" height="375" fill="#2B3438"/><circle cx="150" cy="150" r="58" fill="#3D484C"/><path d="M50 375 C60 270 240 270 250 375Z" fill="#3D484C"/></svg><span class="slot"><svg><use href="#cam"/></svg>Your headshot</span></div>
+    <div>
+      <p style="color:#B7C4BB">Listed by</p>
+      <h3 style="font-size:40px;margin-top:6px">Agent name</h3>
+      <p class="role">Brokerage &nbsp;/&nbsp; License no.</p>
+      <div class="contact">
+        <a href="tel:+17700000000">(770) 000-0000</a>
+        <a href="mailto:hello@example.com">email address</a>
+      </div>
+    </div>
+    <div class="showing">
+      <h3 id="show-h">See it in person</h3>
+      <p>Private showings start Thursday. Call or text and I'll find a time that works, evenings and weekends included.</p>
+      <div class="btns">
+        <a class="primary" href="tel:+17700000000">Call or text to book</a>
+        <a class="ghost" href="mailto:hello@example.com">Email me</a>
+      </div>
+      <div class="open-house"><b>Open house</b><span style="color:#C9D1CC">Date and time to be announced</span></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Listing information deemed reliable but not guaranteed. Figures shown are stand-ins until populated from the MLS sheet.</span>
+    <span>Layout draft by Matt, 27 Sep 2026 — to be rebuilt natively in Canva Websites as your reusable listing template.</span>
+  </div>
+</footer>
+
+<aside class="notes" aria-labelledby="notes-h">
+  <div class="wrap">
+    <h4 id="notes-h">How this becomes your Canva template</h4>
+    <ol>
+      <li>Each band above is one Canva Websites page, stacked, so the whole site scrolls as one listing.</li>
+      <li>Every photo is a Canva frame. Drag Tuesday's photos onto them and they crop to fit.</li>
+      <li>Nav links and buttons use Canva's built-in links to jump to sections, call or email.</li>
+      <li>Location uses Canva's Google Maps embed with the property address.</li>
+      <li>Fonts (League Spartan + Libre Franklin) are in Canva's library, so it matches this draft exactly.</li>
+      <li>Next listing: duplicate the design, change the address, facts and photos, publish to a new link.</li>
+    </ol>
+  </div>
+</aside>
+</body>
+</html>
