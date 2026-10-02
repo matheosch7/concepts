@@ -6,7 +6,8 @@
   --line:rgba(14,36,51,.12); --hair:rgba(14,36,51,.07); --line-inv:rgba(255,255,255,.16); --hair-inv:rgba(255,255,255,.08);
   --sans:"Familjen Grotesk",system-ui,sans-serif; --serif:"Newsreader",Georgia,serif;
   --max:1280px; --gut:clamp(20px,4.4vw,64px); --sec:clamp(80px,10.5vw,144px); --col:calc((min(100vw,var(--max)) - 2*var(--gut) - 11*24px)/12);
-  --ease:cubic-bezier(.23,1,.32,1);
+  --ease:cubic-bezier(.23,1,.32,1); --spring:cubic-bezier(.3,1.25,.5,1);
+  --t-ui:.16s; --t-in:.5s; --t-draw:.9s;
   --lift:0 0 0 1px rgba(14,36,51,.08),0 1px 2px rgba(14,36,51,.05),0 8px 16px -6px rgba(14,36,51,.10),0 28px 56px -18px rgba(14,36,51,.22),0 64px 120px -40px rgba(14,36,51,.30);
   --lift-dark:0 0 0 1px rgba(0,0,0,.18),0 2px 4px rgba(0,0,0,.12),0 16px 32px -10px rgba(0,0,0,.30),0 48px 96px -24px rgba(0,0,0,.50);
 }
@@ -35,7 +36,9 @@ fieldset{border:0}
 blockquote.q{text-indent:-.42em}
 
 /* ---------- header + mobile menu ---------- */
-.top{position:sticky;top:0;z-index:20;background:rgba(245,246,243,.9);backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid var(--hair)}
+.top{position:sticky;top:0;z-index:20;background:rgba(245,246,243,.9);backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid var(--hair);transition:background-color .3s ease,border-color .3s ease}
+/* with JS the bar is part of the page at rest and becomes a surface once content scrolls under it */
+html.js .top:not(.scrolled):not(.menu){background-color:rgba(245,246,243,0);border-bottom-color:transparent;backdrop-filter:none;-webkit-backdrop-filter:none}
 .top .wrap{display:flex;align-items:center;gap:36px;height:68px}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:600;font-size:19px;letter-spacing:-.025em}
 .brand svg{width:28px;height:28px;border-radius:3px}
@@ -44,7 +47,7 @@ blockquote.q{text-indent:-.42em}
 .nav a:hover,.nav a[aria-current]{color:var(--ink)}
 .nav a[aria-current]::after{content:"";position:absolute;left:0;right:0;bottom:-24px;height:2px;background:var(--green)}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font:600 16px/1 var(--sans);letter-spacing:-.005em;padding:16px 22px;border-radius:4px;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:transform .16s var(--ease),background-color .15s ease,border-color .15s ease}
-.btn:active{transform:scale(.97)}
+.btn:active{transform:scale(.98)}
 .btn-primary{background:var(--green);color:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,.14),0 1px 2px rgba(14,36,51,.18)}
 .btn-ghost{border-color:rgba(14,36,51,.22);color:var(--ink);background:transparent}
 .btn-inv{background:#fff;color:var(--navy)}
@@ -59,8 +62,8 @@ blockquote.q{text-indent:-.42em}
 .sheet{display:none}
 @media (max-width:900px){
   .nav{display:none}.top .btn{margin-left:auto}.menu-btn{display:grid}.top .wrap{gap:12px}
-  .sheet{display:flex;flex-direction:column;position:fixed;left:0;right:0;top:68px;height:calc(100dvh - 68px);background:var(--paper);padding:20px var(--gut) 32px;z-index:19;visibility:hidden;opacity:0;transform:translateY(-6px);transition:opacity .2s var(--ease),transform .2s var(--ease),visibility 0s linear .2s}
-  .sheet.open{visibility:visible;opacity:1;transform:none;transition-delay:0s}
+  .sheet{display:flex;flex-direction:column;position:fixed;left:0;right:0;top:68px;height:calc(100dvh - 68px);background:var(--paper);padding:20px var(--gut) 32px;z-index:19;visibility:hidden;opacity:0;transform:translateY(-16px);transition:opacity .18s ease,transform .2s var(--ease),visibility 0s linear .2s}
+  .sheet.open{visibility:visible;opacity:1;transform:none;transition:opacity .24s ease,transform .5s var(--spring),visibility 0s}
   .sheet nav{display:grid;border-top:1px solid var(--line)}
   .sheet nav a{font-size:32px;font-weight:500;letter-spacing:-.035em;text-decoration:none;padding:14px 0;border-bottom:1px solid var(--line)}
   .sheet .btn{margin-top:28px;margin-left:0;width:100%;padding:18px 22px;font-size:16px}
@@ -583,7 +586,7 @@ table.t{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
 .cv-dark .crumb{color:rgba(255,255,255,.66)}
 .cv-light .crumb{color:var(--slate);border-color:var(--line)}
 .crumb > span:first-child{flex:none}
-.crumb a{text-decoration:none}.crumb a:hover{text-decoration:underline}
+.crumb a{text-decoration:none}
 .cover h1{position:relative;font-size:clamp(42px,7.4vw,112px);letter-spacing:-.05em;line-height:.92;font-weight:500;max-width:11.5em;margin-top:clamp(48px,8.6vw,124px)}
 .cover-row{position:relative;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;margin-top:clamp(36px,4vw,56px)}
 .cover-row .lede{grid-column:1/span 6}
@@ -718,13 +721,75 @@ table.t{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
 @media (max-width:900px){.next a.card{grid-template-columns:1fr;row-gap:20px}.next .card h2,.next .card p{grid-column:1/-1}.next .peek .win{zoom:.6;left:0}}
 @media (max-width:600px){.next{padding-bottom:72px}.next .peek{display:none}}
 
-/* ---------- the one load moment ---------- */
-@media (prefers-reduced-motion:no-preference){
-  .rise{animation:rise .8s var(--ease) both}
-  .rise.r2{animation-delay:.07s}.rise.r3{animation-delay:.14s}.rise.r4{animation-delay:.24s}
-  @keyframes rise{from{opacity:0;transform:translateY(16px)}}
+/* ---------- motion (v4) ----------
+   One curve (--ease), three durations (--t-ui 160ms, --t-in 500ms, --t-draw 900ms).
+   Nothing is hidden unless JS has set html.motion (no-preference only); hidden states are only applied
+   to the hero before html.ready and to elements motion.js found below the fold (.rv / .dw). */
+
+/* micro-interactions */
+@media (hover:hover) and (pointer:fine){
+  .nav a:not([aria-current]):hover,.foot nav a:hover,.crumb a:hover{background-size:100% 1px}
+  .vgrid figure,.v-row figure{transition:transform .3s var(--ease)}
+  .vgrid figure:hover,.v-row figure:hover{transform:translateY(-2px)}
 }
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.next .peek .win,.sheet,.menu-btn i{transition:none}}
+.nav a:not([aria-current]),.foot nav a,.crumb a{background:linear-gradient(currentColor,currentColor) 0 100%/0 1px no-repeat;transition:background-size .3s var(--ease),color .15s ease}
+.foot nav a{justify-self:start}
+
+/* live product: tabular figures so ticking values never shift */
+.pane-h .sub,.kpi b,.mkp b,.rp-g dd,.trail .tm{font-variant-numeric:tabular-nums lining-nums}
+.bar-s i{transition:width .6s var(--ease)}
+
+/* hero / cover load: headline lines, then lede, CTAs, proof, then the product */
+@keyframes ld{from{opacity:0;transform:translateY(var(--y,14px))}}
+@keyframes grow{from{transform:scaleY(0)}}
+.lines .w{display:inline-block}
+html.motion:not(.ready) .rise,html.motion:not(.ready) .lines .w{opacity:0}
+html.motion:not(.ready) .rise.lines{opacity:1}
+html.motion.ready .lines .w{animation:ld .56s var(--ease) backwards;animation-delay:calc(var(--l,0)*70ms)}
+html.motion.ready .rise:not(.lines){animation:ld .6s var(--ease) backwards;animation-delay:.2s}
+html.motion.ready .rise.r3{animation-delay:.26s}
+html.motion.ready .proof.rise{animation:none}
+html.motion.ready .proof.rise > div{animation:ld .6s var(--ease) backwards;animation-delay:calc(.3s + var(--n,0)*40ms)}
+.proof > div:nth-child(2){--n:1}.proof > div:nth-child(3){--n:2}.proof > div:nth-child(4){--n:3}
+html.motion.ready .rise.r4{--y:28px;animation-duration:.9s;animation-delay:.48s}
+html.motion.ready .stage .report{animation:ld .9s var(--ease) backwards;animation-delay:.66s;--y:16px}
+html.motion:not(.ready) .wk i{transform:scaleY(0)}
+.wk i{transform-origin:50% 100%}
+html.motion.ready .wk i{animation:grow .6s var(--ease) backwards;animation-delay:calc(.9s + var(--n,0)*60ms)}
+.wk span:nth-child(2) i{--n:1}.wk span:nth-child(3) i{--n:2}.wk span:nth-child(4) i{--n:3}
+
+/* section heads: one gentle fade-up on first view (only those that start below the fold) */
+html.motion .rv{opacity:0;transform:translateY(12px)}
+html.motion .rv.in{opacity:1;transform:none;transition:opacity var(--t-in) var(--ease),transform var(--t-in) var(--ease)}
+
+/* charts draw once from their baseline */
+.chart rect{transform-box:fill-box;transform-origin:50% 100%}
+html.motion .chart.dw:not(.drawn) rect{transform:scaleY(0)}
+html.motion .chart.drawn rect{transition:transform .5s var(--ease);transition-delay:calc(var(--i,0)*6ms)}
+html.motion .ch-ch.dw:not(.drawn) svg{clip-path:inset(0 100% 0 0)}
+html.motion .ch-ch.drawn svg{clip-path:inset(0);transition:clip-path var(--t-draw) var(--ease)}
+html.motion .chart.dw:not(.drawn) .ann,html.motion .chart.dw:not(.drawn) .ch-lab span{opacity:0}
+html.motion .chart.drawn .ann,html.motion .chart.drawn .ch-lab span{transition:opacity .4s ease .6s}
+html.motion .chart.drawn .ch-lab .w{transition-delay:.15s}html.motion .chart.drawn .ch-lab .ph{transition-delay:.35s}
+.g-bar{transform-origin:0 50%}
+html.motion .gantt.dw:not(.drawn) .g-bar{transform:scaleX(0)}
+html.motion .gantt.drawn .g-bar{transition:transform var(--t-draw) var(--ease)}
+html.motion .gantt.drawn li:nth-child(2) .g-bar{transition-delay:.1s}html.motion .gantt.drawn li:nth-child(3) .g-bar{transition-delay:.2s}html.motion .gantt.drawn li:nth-child(4) .g-bar{transition-delay:.3s}
+.kpi polyline{stroke-dasharray:1 1}
+html.motion .kpi.dw:not(.drawn) polyline{stroke-dashoffset:1}
+html.motion .kpi.dw:not(.drawn) svg polygon,html.motion .kpi.dw:not(.drawn) svg circle{opacity:0}
+html.motion .kpi.drawn polyline{transition:stroke-dashoffset var(--t-draw) var(--ease)}
+html.motion .kpi.drawn svg polygon,html.motion .kpi.drawn svg circle{transition:opacity .3s ease .6s}
+
+/* live map vehicle */
+.veh{transition:opacity .3s ease}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .next .peek .win,.sheet,.sheet.open,.menu-btn i,.vgrid figure,.v-row figure,.bar-s i{transition:none}
+  .btn:active{transform:none}
+  .vgrid figure:hover,.v-row figure:hover{transform:none}
+}
 
 /* ---------- mobile (≤600) layout of artefacts ---------- */
 @media (max-width:600px){
