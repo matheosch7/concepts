@@ -3,24 +3,20 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Wholesale ordering and invoicing platform — ReallyBeyond case study</title>
-<meta name="description" content="How ReallyBeyond designed and built one ordering, credit and invoicing platform for a UK food wholesale network, and moved 900 trade customers onto it without losing one.">
+<title>Trade ordering and invoicing platform — ReallyBeyond case study</title>
+<meta name="description" content="How ReallyBeyond designed and built one ordering, credit and invoicing platform for a UK food wholesale network with 900 trade customers.">
 <meta property="og:title" content="Rebuilding ordering and invoicing for 900 trade customers.">
-<meta property="og:description" content="How ReallyBeyond designed and built one ordering, credit and invoicing platform for a UK food wholesale network, and moved 900 trade customers onto it without losing one.">
+<meta property="og:description" content="How ReallyBeyond designed and built one ordering, credit and invoicing platform for a UK food wholesale network with 900 trade customers.">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#0E2433">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%232E7D3A'/%3E%3Ctext x='16' y='22' font-family='Arial' font-weight='700' font-size='15' fill='white' text-anchor='middle'%3ERB%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300;1,6..72,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="rb.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-
-<svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <symbol id="rb" viewBox="0 0 32 32"><rect width="32" height="32" fill="#2E7D3A"/><path fill="#fff" d="M12.522 23L10.092 19.49H7.41V23H4.494V10.4H9.948C11.064 10.4 12.03 10.586 12.846 10.958C13.674 11.33 14.31 11.858 14.754 12.542C15.198 13.226 15.42 14.036 15.42 14.972C15.42 15.908 15.192 16.718 14.736 17.402C14.292 18.074 13.656 18.59 12.828 18.95L15.654 23H12.522ZM12.468 14.972C12.468 14.264 12.24 13.724 11.784 13.352C11.328 12.968 10.662 12.776 9.786 12.776H7.41V17.168H9.786C10.662 17.168 11.328 16.976 11.784 16.592C12.24 16.208 12.468 15.668 12.468 14.972ZM26.982 16.448C27.702 16.676 28.266 17.06 28.674 17.6C29.082 18.128 29.286 18.782 29.286 19.562C29.286 20.666 28.854 21.518 27.99 22.118C27.138 22.706 25.89 23 24.246 23H17.73V10.4H23.886C25.422 10.4 26.598 10.694 27.414 11.282C28.242 11.87 28.656 12.668 28.656 13.676C28.656 14.288 28.506 14.834 28.206 15.314C27.918 15.794 27.51 16.172 26.982 16.448ZM20.628 12.596V15.566H23.526C24.246 15.566 24.792 15.44 25.164 15.188C25.536 14.936 25.722 14.564 25.722 14.072C25.722 13.58 25.536 13.214 25.164 12.974C24.792 12.722 24.246 12.596 23.526 12.596H20.628ZM24.03 20.804C24.798 20.804 25.374 20.678 25.758 20.426C26.154 20.174 26.352 19.784 26.352 19.256C26.352 18.212 25.578 17.69 24.03 17.69H20.628V20.804H24.03Z"/></symbol>
-</svg>
-
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="rb" viewBox="0 0 32 32"><rect width="32" height="32" fill="#2E7D3A"/><path fill="#fff" d="M12.522 23L10.092 19.49H7.41V23H4.494V10.4H9.948C11.064 10.4 12.03 10.586 12.846 10.958C13.674 11.33 14.31 11.858 14.754 12.542C15.198 13.226 15.42 14.036 15.42 14.972C15.42 15.908 15.192 16.718 14.736 17.402C14.292 18.074 13.656 18.59 12.828 18.95L15.654 23H12.522ZM12.468 14.972C12.468 14.264 12.24 13.724 11.784 13.352C11.328 12.968 10.662 12.776 9.786 12.776H7.41V17.168H9.786C10.662 17.168 11.328 16.976 11.784 16.592C12.24 16.208 12.468 15.668 12.468 14.972ZM26.982 16.448C27.702 16.676 28.266 17.06 28.674 17.6C29.082 18.128 29.286 18.782 29.286 19.562C29.286 20.666 28.854 21.518 27.99 22.118C27.138 22.706 25.89 23 24.246 23H17.73V10.4H23.886C25.422 10.4 26.598 10.694 27.414 11.282C28.242 11.87 28.656 12.668 28.656 13.676C28.656 14.288 28.506 14.834 28.206 15.314C27.918 15.794 27.51 16.172 26.982 16.448ZM20.628 12.596V15.566H23.526C24.246 15.566 24.792 15.44 25.164 15.188C25.536 14.936 25.722 14.564 25.722 14.072C25.722 13.58 25.536 13.214 25.164 12.974C24.792 12.722 24.246 12.596 23.526 12.596H20.628ZM24.03 20.804C24.798 20.804 25.374 20.678 25.758 20.426C26.154 20.174 26.352 19.784 26.352 19.256C26.352 18.212 25.578 17.69 24.03 17.69H20.628V20.804H24.03Z"/></symbol></svg>
 <header class="top">
   <div class="wrap">
     <a class="brand" href="index.html" aria-label="ReallyBeyond home"><svg aria-hidden="true"><use href="#rb"/></svg>ReallyBeyond</a>
@@ -33,139 +29,201 @@
 
 <main id="main">
 <article>
-<header class="cs-hero">
+<header class="cover">
   <div class="wrap">
-    <p class="crumb"><a href="index.html#work">Work</a> / Case study 2 of 2</p>
-    <h1 class="d1 rise">Rebuilding ordering and invoicing for 900 trade customers.</h1>
-    <p class="lede rise d2">A UK food wholesale network took orders by phone, email and a slow web shop, then retyped them into accounts. We designed and built one platform for ordering, credit and invoicing, and kept the old shop running until the last customer had moved.</p>
-    <p class="standin-p rise d2">Illustrative case study: the layout is final; platform details will be replaced with ReallyBeyond's prepared content.</p>
-    <dl class="facts rise d3"><div><dt>Client</dt><dd>UK food wholesale network, 3 warehouses</dd></div><div><dt>Users</dt><dd>900 trade customers, 60 staff</dd></div><div><dt>Engagement</dt><dd>2021 to today</dd></div><div><dt>Team</dt><dd>4 engineers, 1 designer</dd></div><div><dt>Our role</dt><dd>Discovery, design, build, ongoing development</dd></div></dl>
+    <p class="crumb"><span><a href="index.html#work">Work</a> / Case study 2 of 2</span><span>UK food wholesale network, since 2021</span></p>
+    <h1 class="rise">Rebuilding ordering and invoicing for 900 trade customers.</h1>
+    <div class="cover-row">
+      <p class="lede rise r2">A UK food wholesale network took orders by phone, email and a slow web shop, then retyped them into accounts. We designed and built one platform for ordering, credit and invoicing, and kept the old shop running until the last customer had moved.</p>
+      <p class="standin rise r2">Illustrative case study: the layout is final; platform details will be replaced with ReallyBeyond's prepared content.</p>
+      <dl class="facts rise r3"><div><dt>Client</dt><dd>UK food wholesale network, 3 warehouses</dd></div><div><dt>Users</dt><dd>900 trade customers, 60 staff</dd></div><div><dt>Engagement</dt><dd>2021 to today</dd></div><div><dt>Team</dt><dd>4 engineers, 1 designer</dd></div><div><dt>Our role</dt><dd>Discovery, design, build, ongoing development</dd></div></dl>
+    </div>
+    <div class="cover-art rise r4"><div class="win" role="img" aria-label="Trade ordering screen from the wholesale platform: usual products, delivery slot, credit used and order total">
+  <div class="chrome"><span class="dots"><i></i><i></i><i></i></span><span class="url"><svg viewBox="0 0 10 10"><rect x="2" y="4.5" width="6" height="4.5" rx="1" fill="#8A949B"/><path d="M3.4 4.5V3.3a1.6 1.6 0 013.2 0v1.2" fill="none" stroke="#8A949B" stroke-width="1"/></svg><span><b>trade.platform</b>/harbour-kitchen/order</span></span><span class="r">Wed 2 Oct, 21:47</span></div>
+  <div class="ui">
+    <nav class="side" aria-hidden="true">
+      <div class="org"><i style="background:#2E7D3A">HK</i>Harbour Kitchen Ltd</div>
+      <span class="lk on">New order</span><span class="lk">Usual products <em>38</em></span><span class="lk">Order history</span><span class="lk">Invoices <em>2 due</em></span><span class="lk">Credit</span><span class="lk">Delivery slots</span>
+      <span class="grp">Account</span><span class="lk">Team</span><span class="lk">Addresses</span>
+      <div class="me"><span class="av lg a2">RC</span><span>R. Costa<small>Head chef</small></span></div>
+    </nav>
+    <div class="pane">
+      <div class="pane-h"><h4>Order for Thursday</h4><span class="sub">Order by 23:00 for next-morning delivery</span><span class="grow"></span><span class="pill">Repeat last order</span></div>
+      <div class="slots"><span class="slot">04:00–06:00<small>2 left</small></span><span class="slot on">06:00–08:00<small>Your usual</small></span><span class="slot off">08:00–10:00<small>Full</small></span><span class="slot">10:00–12:00<small>Open</small></span></div>
+      <div class="ord">
+        <table class="t"><thead><tr><th>Product</th><th>Pack</th><th>Qty</th><th class="r">Price</th><th class="r">Line</th></tr></thead><tbody><tr><td><b>Plum tomatoes, tinned</b><br><span class="mono" style="font-size:11px">TOM-6025</span></td><td class="mono">6 × 2.5 kg</td><td><span class="qty"><i>−</i><b>4</b><i>+</i></span></td><td class="r mono">£14.80</td><td class="r"><b>£59.20</b></td></tr><tr><td><b>Mozzarella fior di latte</b><br><span class="mono" style="font-size:11px">MOZ-0810</span></td><td class="mono">8 × 1 kg</td><td><span class="qty"><i>−</i><b>2</b><i>+</i></span></td><td class="r mono">£52.00</td><td class="r"><b>£104.00</b></td></tr><tr><td><b>Type 00 flour</b><br><span class="mono" style="font-size:11px">FLR-0016</span></td><td class="mono">16 kg</td><td><span class="qty"><i>−</i><b>5</b><i>+</i></span></td><td class="r mono">£11.40</td><td class="r"><b>£57.00</b></td></tr><tr><td><b>Extra virgin olive oil</b><br><span class="mono" style="font-size:11px">OIL-4005</span></td><td class="mono">4 × 5 L</td><td><span class="qty"><i>−</i><b>1</b><i>+</i></span></td><td class="r mono">£78.50</td><td class="r"><b>£78.50</b></td></tr><tr><td><b>Basil, fresh</b><br><span class="mono" style="font-size:11px">BSL-0500</span></td><td class="mono">500 g</td><td><span class="qty"><i>−</i><b>3</b><i>+</i></span></td><td class="r mono">£6.90</td><td class="r"><b>£20.70</b></td></tr><tr><td><b>Parmigiano Reggiano 24m</b><br><span class="mono" style="font-size:11px">PRM-1002</span></td><td class="mono">2 × 1 kg</td><td><span class="qty"><i>−</i><b>1</b><i>+</i></span></td><td class="r mono">£41.20</td><td class="r"><b>£41.20</b></td></tr></tbody></table>
+        <aside class="sum">
+          <div class="credit"><small>Credit used</small><b>£4,760 <span>of £8,000</span></b><span class="meter"><i style="width:59.5%"></i><i class="add" style="width:5.0%"></i></span><small>This order adds £432.72</small></div>
+          <dl><div><dt>Subtotal</dt><dd>£360.60</dd></div><div><dt>VAT</dt><dd>£72.12</dd></div><div class="tot"><dt>Total</dt><dd>£432.72</dd></div></dl>
+          <span class="place">Place order</span>
+          <small class="fine">Invoice sent the night it is delivered. Direct debit, 14 days.</small>
+        </aside>
+      </div>
+    </div>
+  </div>
+</div><div class="phone" role="img" aria-label="Mobile ordering for kitchen staff: the usual order with quantities and the cut-off time">
+  <div class="scr">
+    <div class="sb"><span>21:52</span><span class="isl"></span><span class="sig"><i style="height:4px"></i><i style="height:6px"></i><i style="height:8px"></i><i style="height:10px"></i></span></div>
+    <div class="ph-h"><small>Harbour Kitchen Ltd</small><h5>Usual order</h5><div class="cut">Thursday 06:00–08:00<b>Order within 1 h 8 min</b></div></div>
+    <div class="ph-list"><div><span class="lbl">Plum tomatoes, tinned<small>6 × 2.5 kg</small></span><span class="qty"><i>−</i><b>4</b><i>+</i></span></div><div><span class="lbl">Mozzarella fior di latte<small>8 × 1 kg</small></span><span class="qty"><i>−</i><b>2</b><i>+</i></span></div><div><span class="lbl">Type 00 flour<small>16 kg</small></span><span class="qty"><i>−</i><b>5</b><i>+</i></span></div><div><span class="lbl">Basil, fresh<small>500 g</small></span><span class="qty"><i>−</i><b>3</b><i>+</i></span></div><div><span class="lbl">Lemons, unwaxed<small>5 kg</small></span><span class="qty"><i>−</i><b>1</b><i>+</i></span></div></div>
+    <div class="ph-tot"><span>5 lines, excl. VAT</span><b>£260.40</b></div>
+    <div class="ph-btn" style="background:#2E7D3A">Place order</div><div class="ph-home"></div>
+  </div>
+</div></div>
   </div>
 </header>
 
-<figure class="cs-visual">
+<section class="rband" aria-labelledby="res-h">
   <div class="wrap">
-    <div class="screen" role="img" aria-label="Trade ordering screen from the wholesale platform">
-          <div class="bar"><i></i><i></i><i></i><b>orders — Harbour Kitchen Ltd</b></div>
-          <div class="app">
-            <aside><strong>Trade account</strong><span class="on">New order</span><span>Order history</span><span>Invoices</span><span>Credit</span><span>Delivery slots</span></aside>
-            <main>
-              <div class="ttl"><h4>Order for Thursday, 06:00–08:00</h4><em>Credit left £3,240</em></div>
-              <table>
-                <thead><tr><th>Product</th><th class="opt">Pack</th><th>Qty</th><th class="opt">Price</th><th>Line</th></tr></thead>
-                <tbody>
-                  <tr><td>Plum tomatoes, tinned</td><td class="opt">6 × 2.5 kg</td><td>4</td><td class="opt">£14.80</td><td>£59.20</td></tr>
-                  <tr><td>Mozzarella fior di latte</td><td class="opt">8 × 1 kg</td><td>2</td><td class="opt">£52.00</td><td>£104.00</td></tr>
-                  <tr><td>Type 00 flour</td><td class="opt">16 kg</td><td>5</td><td class="opt">£11.40</td><td>£57.00</td></tr>
-                  <tr><td>Extra virgin olive oil</td><td class="opt">4 × 5 L</td><td>1</td><td class="opt">£78.50</td><td>£78.50</td></tr>
-                  <tr><td>Basil, fresh</td><td class="opt">500 g</td><td>3</td><td class="opt">£6.90</td><td>£20.70</td></tr>
-                  <tr><td><b>Total excl. VAT</b></td><td class="opt"></td><td></td><td class="opt"></td><td><b>£319.40</b></td></tr>
-                </tbody>
-              </table>
-            </main>
-          </div>
-        </div>
-      
-    <figcaption>The order screen a restaurant uses at closing time: their usual products, their credit and the next delivery slot.</figcaption>
-  </div>
-</figure>
-
-<div class="wrap">
-  <section class="prose" aria-labelledby="s1">
-    <h2 id="s1">The situation</h2>
-    <div class="body"><p>Restaurants, cafés and caterers ordered for next-morning delivery by phoning a sales desk, emailing lists, or using a web shop that did not know their prices or their credit limit. Every order was retyped into the accounts system by hand.</p><p>Wrong prices, missed lines and late invoices led to about 120 disputes a month. The finance director wanted one system the customers would actually use, without forcing anyone to change overnight.</p></div>
-  </section>
-  <section class="prose" aria-labelledby="s2">
-    <h2 id="s2">What we inherited</h2>
-    <div class="body"><ul><li>A WooCommerce shop with one price list, while every trade customer had their own.</li><li>An on-premise accounts system with a nightly CSV export as its only interface.</li><li>Delivery slots planned in a shared spreadsheet per warehouse.</li><li>Credit limits checked by phone with the finance team before large orders.</li></ul></div>
-  </section>
-  <section class="prose" aria-labelledby="s3">
-    <h2 id="s3">What we did, year by year</h2>
-    <div class="body"><ol class="timeline"><li><b>2021</b><h3>Discovery with twelve customers</h3><p>Two weeks at the sales desk and in twelve customers' kitchens, mapping how orders really arrive and where they go wrong.</p></li><li><b>2021 — 2022</b><h3>Design and pilot</h3><p>Ordering, credit and delivery-slot screens designed with the pilot group; first orders placed on the new platform in month five.</p></li><li><b>2022</b><h3>Accounts integration</h3><p>A two-way sync with the accounts system: customer prices and credit in, invoices and payments out, reconciled every fifteen minutes.</p></li><li><b>2023</b><h3>Customers moved warehouse by warehouse</h3><p>The old shop stayed live alongside the new platform until the last customer moved, nine months later.</p></li><li><b>2024 — today</b><h3>Mobile ordering and credit control</h3><p>A mobile ordering flow for kitchen staff, automatic credit holds and releases every week or more often.</p></li></ol></div>
-  </section>
-  <section class="wide" aria-labelledby="s4">
-    <div class="hd"><h2 id="s4">Inside the product</h2><p>Built for a kitchen at 22:00 and a finance team at 09:00: the same order, two views, no retyping.</p></div>
-    <div class="pair"><div class="screen" role="img" aria-label="Invoices">
-          <div class="bar"><i></i><i></i><i></i><b>Invoices</b></div>
-          <div class="app" style="grid-template-columns:1fr;min-height:0"><main>
-            <div class="ttl"><h4>Invoice INV-20481</h4><em>Harbour Kitchen Ltd</em></div>
-            <table><thead><tr><th>Item</th><th>Detail</th><th>Status</th></tr></thead><tbody><tr><td>Order</td><td>ORD-77310</td><td><span class="st ok">Delivered</span></td></tr><tr><td>Invoice</td><td>£383.28 incl. VAT</td><td><span class="st go">Sent</span></td></tr><tr><td>Credit note</td><td>Basil short by 1</td><td><span class="st wait">Applied</span></td></tr><tr><td>Payment</td><td>Direct debit, 14 days</td><td><span class="st ok">Scheduled</span></td></tr></tbody></table>
-          </main></div></div><div class="screen" role="img" aria-label="Delivery slots">
-          <div class="bar"><i></i><i></i><i></i><b>Delivery slots</b></div>
-          <div class="app" style="grid-template-columns:1fr;min-height:0"><main>
-            <div class="ttl"><h4>Thursday slots, North warehouse</h4><em>Van capacity</em></div>
-            <table><thead><tr><th>Slot</th><th>Booked</th><th>Status</th></tr></thead><tbody><tr><td>04:00–06:00</td><td>38 / 40 drops</td><td><span class="st wait">Nearly full</span></td></tr><tr><td>06:00–08:00</td><td>31 / 40 drops</td><td><span class="st ok">Open</span></td></tr><tr><td>08:00–10:00</td><td>40 / 40 drops</td><td><span class="st bad">Full</span></td></tr><tr><td>10:00–12:00</td><td>12 / 40 drops</td><td><span class="st ok">Open</span></td></tr></tbody></table>
-          </main></div></div></div>
-  </section>
-</div>
-</article>
-
-<section class="results-band" aria-labelledby="s5">
-  <div class="wrap">
-    <h2 id="s5">Results</h2>
-    <div class="rrow"><span class="m">Orders placed online</span><span class="b">31%</span><span class="n">88%</span></div><div class="rrow"><span class="m">Invoice disputes per month</span><span class="b">120</span><span class="n">14</span></div><div class="rrow"><span class="m">Time from delivery to invoice</span><span class="b">3 days</span><span class="n">Same night</span></div><div class="rrow"><span class="m">Orders taken by phone per day</span><span class="b">340</span><span class="n">41</span></div><div class="rrow"><span class="m">Customers lost in the switchover</span><span class="b"></span><span class="n">0</span></div>
-    <ul class="stack" aria-label="Technology"><li>Laravel</li><li>PHP 8</li><li>Vue</li><li>MySQL</li><li>Sage 200 integration</li><li>Flutter</li><li>AWS</li></ul>
+    <div class="rh"><h2 id="res-h">Results</h2><p>Measured across all three warehouses, 2021 against 2026.</p></div>
+    <div class="rgrid"><div><b>88%</b><span class="was">was 31%</span><span class="m">Orders placed online</span></div><div><b>14</b><span class="was">was 120</span><span class="m">Invoice disputes a month</span></div><div><b>Same night</b><span class="was">was 3 days</span><span class="m">Time from delivery to invoice</span></div><div><b>41</b><span class="was">was 340</span><span class="m">Orders taken by phone a day</span></div><div><b>0</b><span class="was">&nbsp;</span><span class="m">Customers lost in the switchover</span></div></div>
+    <ul class="stack" aria-label="Technology"><li>Built with</li><li>Laravel</li><li>PHP 8</li><li>Vue</li><li>MySQL</li><li>Sage 200 integration</li><li>Flutter</li><li>AWS</li></ul>
   </div>
 </section>
+
+<div class="story">
+  <div class="wrap">
+    <section class="prose" aria-labelledby="s1"><h2 id="s1">The situation</h2><div class="body"><p>Restaurants, cafés and caterers ordered for next-morning delivery by phoning a sales desk, emailing lists, or using a web shop that did not know their prices or their credit limit.</p><p>Every order was retyped into the accounts system by hand. Wrong prices, missed lines and late invoices led to about 120 disputes a month. The finance director wanted one system the customers would actually use, without forcing anyone to change overnight.</p></div></section>
+    <section class="prose" aria-labelledby="s2"><h2 id="s2">What we inherited</h2><div class="body"><ul class="inh"><li><b>1</b>price list in a WooCommerce shop, while every trade customer had their own.</li><li><b>CSV</b>a nightly export as the only interface to the on-premise accounts system.</li><li><b>3</b>shared spreadsheets planning delivery slots, one per warehouse.</li><li><b>Phone</b>credit limits checked by calling finance before large orders.</li></ul></div></section>
+    <section class="prose" aria-labelledby="s3"><h2 id="s3">What we did, year by year</h2><div class="body"><ol class="timeline"><li><span class="y">2021</span><div><h3>Discovery with twelve customers</h3><p>Two weeks at the sales desk and in twelve customers' kitchens, mapping how orders really arrive and where they go wrong.</p></div></li><li><span class="y">2021 – 2022</span><div><h3>Design and pilot</h3><p>Ordering, credit and delivery-slot screens designed with the pilot group; first orders placed on the new platform in month five.</p></div></li><li><span class="y">2022</span><div><h3>Accounts integration</h3><p>A two-way sync with the accounts system: customer prices and credit in, invoices and payments out, reconciled every fifteen minutes.</p></div></li><li><span class="y">2023</span><div><h3>Customers moved warehouse by warehouse</h3><p>The old shop stayed live alongside the new platform until the last customer moved, nine months later.</p></div></li><li><span class="y">2024 – today</span><div><h3>Mobile ordering and credit control</h3><p>A mobile ordering flow for kitchen staff, automatic credit holds and releases every week or more often.</p></div></li></ol></div></section>
+  </div>
+</div>
+
+<section class="gallery on-light" aria-labelledby="s4">
+  <div class="wrap">
+    <div class="g-cap"><h2 id="s4">Inside the product</h2><p>Built for a kitchen at 22:00 and a finance team at 09:00: the same order, two views, no retyping.</p></div>
+    <div class="g-grid">
+      <figure class="g-main"><div class="frame"><div class="win" role="img" aria-label="Trade ordering screen from the wholesale platform: usual products, delivery slot, credit used and order total">
+  <div class="chrome"><span class="dots"><i></i><i></i><i></i></span><span class="url"><svg viewBox="0 0 10 10"><rect x="2" y="4.5" width="6" height="4.5" rx="1" fill="#8A949B"/><path d="M3.4 4.5V3.3a1.6 1.6 0 013.2 0v1.2" fill="none" stroke="#8A949B" stroke-width="1"/></svg><span><b>trade.platform</b>/harbour-kitchen/order</span></span><span class="r">Wed 2 Oct, 21:47</span></div>
+  <div class="ui">
+    <nav class="side" aria-hidden="true">
+      <div class="org"><i style="background:#2E7D3A">HK</i>Harbour Kitchen Ltd</div>
+      <span class="lk on">New order</span><span class="lk">Usual products <em>38</em></span><span class="lk">Order history</span><span class="lk">Invoices <em>2 due</em></span><span class="lk">Credit</span><span class="lk">Delivery slots</span>
+      <span class="grp">Account</span><span class="lk">Team</span><span class="lk">Addresses</span>
+      <div class="me"><span class="av lg a2">RC</span><span>R. Costa<small>Head chef</small></span></div>
+    </nav>
+    <div class="pane">
+      <div class="pane-h"><h4>Order for Thursday</h4><span class="sub">Order by 23:00 for next-morning delivery</span><span class="grow"></span><span class="pill">Repeat last order</span></div>
+      <div class="slots"><span class="slot">04:00–06:00<small>2 left</small></span><span class="slot on">06:00–08:00<small>Your usual</small></span><span class="slot off">08:00–10:00<small>Full</small></span><span class="slot">10:00–12:00<small>Open</small></span></div>
+      <div class="ord">
+        <table class="t"><thead><tr><th>Product</th><th>Pack</th><th>Qty</th><th class="r">Price</th><th class="r">Line</th></tr></thead><tbody><tr><td><b>Plum tomatoes, tinned</b><br><span class="mono" style="font-size:11px">TOM-6025</span></td><td class="mono">6 × 2.5 kg</td><td><span class="qty"><i>−</i><b>4</b><i>+</i></span></td><td class="r mono">£14.80</td><td class="r"><b>£59.20</b></td></tr><tr><td><b>Mozzarella fior di latte</b><br><span class="mono" style="font-size:11px">MOZ-0810</span></td><td class="mono">8 × 1 kg</td><td><span class="qty"><i>−</i><b>2</b><i>+</i></span></td><td class="r mono">£52.00</td><td class="r"><b>£104.00</b></td></tr><tr><td><b>Type 00 flour</b><br><span class="mono" style="font-size:11px">FLR-0016</span></td><td class="mono">16 kg</td><td><span class="qty"><i>−</i><b>5</b><i>+</i></span></td><td class="r mono">£11.40</td><td class="r"><b>£57.00</b></td></tr><tr><td><b>Extra virgin olive oil</b><br><span class="mono" style="font-size:11px">OIL-4005</span></td><td class="mono">4 × 5 L</td><td><span class="qty"><i>−</i><b>1</b><i>+</i></span></td><td class="r mono">£78.50</td><td class="r"><b>£78.50</b></td></tr><tr><td><b>Basil, fresh</b><br><span class="mono" style="font-size:11px">BSL-0500</span></td><td class="mono">500 g</td><td><span class="qty"><i>−</i><b>3</b><i>+</i></span></td><td class="r mono">£6.90</td><td class="r"><b>£20.70</b></td></tr><tr><td><b>Parmigiano Reggiano 24m</b><br><span class="mono" style="font-size:11px">PRM-1002</span></td><td class="mono">2 × 1 kg</td><td><span class="qty"><i>−</i><b>1</b><i>+</i></span></td><td class="r mono">£41.20</td><td class="r"><b>£41.20</b></td></tr></tbody></table>
+        <aside class="sum">
+          <div class="credit"><small>Credit used</small><b>£4,760 <span>of £8,000</span></b><span class="meter"><i style="width:59.5%"></i><i class="add" style="width:5.0%"></i></span><small>This order adds £432.72</small></div>
+          <dl><div><dt>Subtotal</dt><dd>£360.60</dd></div><div><dt>VAT</dt><dd>£72.12</dd></div><div class="tot"><dt>Total</dt><dd>£432.72</dd></div></dl>
+          <span class="place">Place order</span>
+          <small class="fine">Invoice sent the night it is delivered. Direct debit, 14 days.</small>
+        </aside>
+      </div>
+    </div>
+  </div>
+</div></div><figcaption>The order screen a restaurant uses at closing time: their own prices, their credit and the next delivery slot.</figcaption></figure>
+      <figure class="g-a"><div class="frame"><div class="win" role="img" aria-label="Invoices, last 48 hours">
+  <div class="chrome"><span class="dots"><i></i><i></i><i></i></span><span class="url"><svg viewBox="0 0 10 10"><rect x="2" y="4.5" width="6" height="4.5" rx="1" fill="#8A949B"/><path d="M3.4 4.5V3.3a1.6 1.6 0 013.2 0v1.2" fill="none" stroke="#8A949B" stroke-width="1"/></svg><span><b>trade.platform</b>/finance/invoices</span></span><span class="r"></span></div>
+  <div class="pane"><div class="pane-h"><h4>Invoices, last 48 hours</h4><span class="sub">Synced with Sage 200 every 15 min</span></div>
+  <table class="t"><thead><tr><th>Number</th><th>Customer</th><th class="r">Amount</th><th>Date</th><th>Status</th></tr></thead><tbody><tr><td><b>INV-20481</b></td><td>Harbour Kitchen Ltd</td><td class="r">£383.28</td><td>Wed 2 Oct</td><td><span class="st ok">Paid</span></td></tr><tr><td><b>INV-20480</b></td><td>Nonna Rosa Café</td><td class="r">£1,126.40</td><td>Wed 2 Oct</td><td><span class="st go">Sent</span></td></tr><tr><td><b>CN-01192</b></td><td>Harbour Kitchen Ltd</td><td class="r">−£8.28</td><td>Wed 2 Oct</td><td><span class="st wait">Credit note</span></td></tr><tr><td><b>INV-20476</b></td><td>The Quay Canteen</td><td class="r">£742.05</td><td>Tue 1 Oct</td><td><span class="st ok">Paid</span></td></tr><tr><td><b>INV-20471</b></td><td>Lune Bakery</td><td class="r">£214.90</td><td>Tue 1 Oct</td><td><span class="st bad">Overdue 3 d</span></td></tr></tbody></table></div>
+</div><div style="height:20px"></div><div class="crop" role="img" aria-label="Detail: delivery slot capacity for Thursday, North warehouse">
+  <div class="cap"><span>Detail, delivery slots</span><span>North warehouse</span></div>
+  <div class="body slotcap">
+    <div><span>04:00–06:00</span><span class="meter"><i style="width:95%;background:#B08A2E"></i></span><b>38/40</b></div>
+    <div><span>06:00–08:00</span><span class="meter"><i style="width:77%"></i></span><b>31/40</b></div>
+    <div><span>08:00–10:00</span><span class="meter"><i style="width:100%;background:#C0473A"></i></span><b>40/40</b></div>
+    <div><span>10:00–12:00</span><span class="meter"><i style="width:30%"></i></span><b>12/40</b></div>
+  </div>
+</div></div><figcaption>Finance sees every invoice and credit note the night it is created; warehouses see van capacity per slot.</figcaption></figure>
+      <figure class="g-b"><div class="frame"><div class="phone" role="img" aria-label="Mobile ordering for kitchen staff: the usual order with quantities and the cut-off time">
+  <div class="scr">
+    <div class="sb"><span>21:52</span><span class="isl"></span><span class="sig"><i style="height:4px"></i><i style="height:6px"></i><i style="height:8px"></i><i style="height:10px"></i></span></div>
+    <div class="ph-h"><small>Harbour Kitchen Ltd</small><h5>Usual order</h5><div class="cut">Thursday 06:00–08:00<b>Order within 1 h 8 min</b></div></div>
+    <div class="ph-list"><div><span class="lbl">Plum tomatoes, tinned<small>6 × 2.5 kg</small></span><span class="qty"><i>−</i><b>4</b><i>+</i></span></div><div><span class="lbl">Mozzarella fior di latte<small>8 × 1 kg</small></span><span class="qty"><i>−</i><b>2</b><i>+</i></span></div><div><span class="lbl">Type 00 flour<small>16 kg</small></span><span class="qty"><i>−</i><b>5</b><i>+</i></span></div><div><span class="lbl">Basil, fresh<small>500 g</small></span><span class="qty"><i>−</i><b>3</b><i>+</i></span></div><div><span class="lbl">Lemons, unwaxed<small>5 kg</small></span><span class="qty"><i>−</i><b>1</b><i>+</i></span></div></div>
+    <div class="ph-tot"><span>5 lines, excl. VAT</span><b>£260.40</b></div>
+    <div class="ph-btn" style="background:#2E7D3A">Place order</div><div class="ph-home"></div>
+  </div>
+</div></div><figcaption>Kitchen staff reorder their usual products from a phone in under a minute.</figcaption></figure>
+    </div>
+  </div>
+</section>
+</article>
 
 <section class="cs-quote" aria-label="Client testimonial">
   <div class="wrap">
-    <blockquote class="q">“Our customers order the way they always did, only now it arrives right and the invoice is out before the van is back.”</blockquote>
-    <p class="cite"><b>Finance Director</b><span>UK food wholesale network (sample quote, awaiting client approval)</span></p>
+    <figure class="hq">
+      <blockquote class="q">“Our customers order the way they always did, only now it arrives right and the invoice is out before the van is back.”</blockquote>
+      <figcaption class="cite"><span class="mk">FD</span><span><b>Finance Director</b><span>UK food wholesale network (sample quote, awaiting client approval)</span></span></figcaption>
+    </figure>
   </div>
 </section>
 
-<section class="next-sec" aria-label="Next case study">
-  <div class="wrap" style="padding-top:clamp(48px,6vw,80px);padding-bottom:24px"><h2 class="d3">Next case study</h2></div>
-  <article class="slab">
-    <div class="wrap">
-      <div>
-        <p class="who">European logistics group, since 2020</p>
-        <h3>Taking over the dispatch platform that moves 2,300 loads a day</h3>
-        <p>An eleven-year-old system with one remaining developer. We stabilised it in a quarter, migrated it without a day of downtime, and now ship to it twice a week.</p>
-        <dl class="ledger">
-          <div><dt>Releases per month</dt><dd class="num">1 → 9</dd></div>
-          <div><dt>Page load, 95th percentile</dt><dd class="num">2.4 s → 0.38 s</dd></div>
-          <div><dt>Team</dt><dd>6 engineers, 1 designer, 1 lead</dd></div>
-        </dl>
-        <a class="btn" href="case-study.html">Read the case study</a>
-        <p class="standin">Illustrative content. Final platform details to come from ReallyBeyond.</p>
+<section class="next" aria-label="Next case study">
+  <div class="wrap">
+    <p class="nh"><span>Next case study</span><span>1 of 2</span></p>
+    <a class="card" href="case-study.html">
+      <h2>Taking over the dispatch platform that moves 2,300 loads a day.</h2>
+      <p>An eleven-year-old logistics system with one remaining developer, now released twice a week.</p>
+      <div class="peek" aria-hidden="true"><div class="win" role="img" aria-label="Dispatch board of a logistics platform run by ReallyBeyond: today's loads, drivers, a live route map and status for each load">
+  <div class="chrome"><span class="dots"><i></i><i></i><i></i></span><span class="url"><svg viewBox="0 0 10 10"><rect x="2" y="4.5" width="6" height="4.5" rx="1" fill="#8A949B"/><path d="M3.4 4.5V3.3a1.6 1.6 0 013.2 0v1.2" fill="none" stroke="#8A949B" stroke-width="1"/></svg><span><b>dispatch.platform</b>/rotterdam/today</span></span><span class="r">Thu 3 Oct, 14:20</span></div>
+  <div class="ui">
+    <nav class="side" aria-hidden="true">
+      <div class="org"><i>RD</i>Rotterdam depot</div>
+      <span class="lk on">Today's loads <em>2,318</em></span><span class="lk">Planning <em>Fri</em></span><span class="lk">Drivers <em>186</em></span><span class="lk">Vehicle checks <em class="r">3</em></span>
+      <span class="grp">Depots</span><span class="lk">Antwerp</span><span class="lk">Duisburg</span><span class="lk">Lille</span>
+      <span class="grp">Records</span><span class="lk">Audit log</span><span class="lk">Reports</span>
+      <div class="me"><span class="av lg a1">AS</span><span>A. Smit<small>Planner, early shift</small></span></div>
+    </nav>
+    <div class="pane">
+      <div class="pane-h"><h4>Today's loads</h4><span class="sub">Updated 12 s ago</span><span class="grow"></span><span class="seg"><span class="on">Board</span><span>Map</span><span>Timeline</span></span><span class="pill">Filter</span><span class="pill pri">New load</span></div>
+      <div class="kpi">
+        <div><small>Loads today</small><b>2,318</b><svg viewBox="0 0 64 22" aria-hidden="true"><polygon points="0,22 0.0,20.0 8.0,15.8 16.0,17.9 24.0,11.5 32.0,13.6 40.0,8.3 48.0,6.2 56.0,7.2 64.0,3.0 64,22" fill="#0A4367" opacity=".08"/><polyline points="0.0,20.0 8.0,15.8 16.0,17.9 24.0,11.5 32.0,13.6 40.0,8.3 48.0,6.2 56.0,7.2 64.0,3.0" fill="none" stroke="#0A4367" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/><circle cx="64.0" cy="3.0" r="2" fill="#0A4367"/></svg><span class="d">+4.1% on last Thursday</span></div>
+        <div><small>On time</small><b>96.4%</b><svg viewBox="0 0 64 22" aria-hidden="true"><polygon points="0,22 0.0,20.0 8.0,15.8 16.0,11.5 24.0,15.8 32.0,7.2 40.0,11.5 48.0,7.2 56.0,3.0 64.0,5.5 64,22" fill="#2E7D3A" opacity=".08"/><polyline points="0.0,20.0 8.0,15.8 16.0,11.5 24.0,15.8 32.0,7.2 40.0,11.5 48.0,7.2 56.0,3.0 64.0,5.5" fill="none" stroke="#2E7D3A" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/><circle cx="64.0" cy="5.5" r="2" fill="#2E7D3A"/></svg><span class="d">Target 95%</span></div>
+        <div><small>Awaiting driver</small><b>41</b><svg viewBox="0 0 64 22" aria-hidden="true"><polygon points="0,22 0.0,3.0 8.0,9.8 16.0,7.2 24.0,13.2 32.0,14.9 40.0,16.6 48.0,20.0 56.0,17.4 64.0,19.1 64,22" fill="#6B5310" opacity=".08"/><polyline points="0.0,3.0 8.0,9.8 16.0,7.2 24.0,13.2 32.0,14.9 40.0,16.6 48.0,20.0 56.0,17.4 64.0,19.1" fill="none" stroke="#6B5310" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/><circle cx="64.0" cy="19.1" r="2" fill="#6B5310"/></svg><span class="d">Peak 06:00 cleared</span></div>
+        <div><small>Check failures</small><b>3</b><svg viewBox="0 0 64 22" aria-hidden="true"><polygon points="0,22 0.0,14.3 8.0,20.0 16.0,8.7 24.0,14.3 32.0,14.3 40.0,8.7 48.0,14.3 56.0,3.0 64.0,3.0 64,22" fill="#8A2A20" opacity=".08"/><polyline points="0.0,14.3 8.0,20.0 16.0,8.7 24.0,14.3 32.0,14.3 40.0,8.7 48.0,14.3 56.0,3.0 64.0,3.0" fill="none" stroke="#8A2A20" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/><circle cx="64.0" cy="3.0" r="2" fill="#8A2A20"/></svg><span class="d n">1 load held</span></div>
       </div>
-      <div class="shot">
-        <div class="screen" role="img" aria-label="Vehicle check screen from the logistics platform">
-          <div class="bar"><i></i><i></i><i></i><b>Vehicle checks — NL-61-TRM</b></div>
-          <div class="app">
-            <aside><strong>Fleet</strong><span>Vehicles</span><span class="on">Vehicle checks</span><span>Defects</span><span>Tachograph</span><span>Audit log</span></aside>
-            <main>
-              <div class="ttl"><h4>Pre-trip check, DAF XF 480</h4><em>J. Peeters · 13:52</em></div>
-              <table>
-                <thead><tr><th>Item</th><th>Result</th><th class="opt">Note</th></tr></thead>
-                <tbody>
-                  <tr><td>Tyres and wheel nuts</td><td><span class="st ok">Pass</span></td><td class="opt">Tread 6 mm</td></tr>
-                  <tr><td>Lights and indicators</td><td><span class="st ok">Pass</span></td><td class="opt">—</td></tr>
-                  <tr><td>Service brake</td><td><span class="st bad">Fail</span></td><td class="opt">Air pressure low</td></tr>
-                  <tr><td>Coupling and kingpin</td><td><span class="st ok">Pass</span></td><td class="opt">—</td></tr>
-                  <tr><td>Load security</td><td><span class="st wait">Pending</span></td><td class="opt">Photo required</td></tr>
-                  <tr><td>Defect report sent</td><td><span class="st go">Workshop</span></td><td class="opt">Depot 3, bay 2</td></tr>
-                </tbody>
-              </table>
-            </main>
-          </div>
-        </div>
+      <div class="split">
+        <table class="t"><thead><tr><th>Load</th><th>Route</th><th>Driver</th><th>Progress, ETA</th><th>Status</th></tr></thead><tbody><tr><td><b>RT-48213</b></td><td>Rotterdam → Antwerp</td><td><span class="who"><span class="av a1">MV</span>M. de Vries</span></td><td><span class="bar-s"><i style="width:72%"></i></span><span class="mono">15:05</span></td><td><span class="st go">In transit</span></td></tr><tr><td><b>RT-48214</b></td><td>Rotterdam → Duisburg</td><td><span class="who"><span class="av a2">KN</span>K. Nowak</span></td><td><span class="bar-s"><i style="width:18%"></i></span><span class="mono">17:40</span></td><td><span class="st ok">Loaded</span></td></tr><tr><td><b>RT-48219</b></td><td>Rotterdam → Lille</td><td><span class="who" style="color:var(--mute)"><span class="av" style="background:#E7ECEA;color:#8A949B">?</span>Unassigned</span></td><td><span class="bar-s"></span><span class="mono">—</span></td><td><span class="st wait">Awaiting driver</span></td></tr><tr class="sel"><td><b>RT-48222</b></td><td>Rotterdam → Hamburg</td><td><span class="who"><span class="av a4">JP</span>J. Peeters</span></td><td><span class="bar-s"></span><span class="mono">held</span></td><td><span class="st bad">Check failed</span></td></tr><tr><td><b>RT-48230</b></td><td>Rotterdam → Utrecht</td><td><span class="who"><span class="av a3">SB</span>S. Bakker</span></td><td><span class="bar-s"><i style="width:64%"></i></span><span class="mono">15:35</span></td><td><span class="st go">In transit</span></td></tr><tr><td><b>RT-48231</b></td><td>Rotterdam → Eindhoven</td><td><span class="who"><span class="av a5">LH</span>L. Hendriks</span></td><td><span class="bar-s"><i style="width:41%"></i></span><span class="mono">16:10</span></td><td><span class="st go">In transit</span></td></tr><tr><td><b>RT-48236</b></td><td>Rotterdam → Ghent</td><td><span class="who"><span class="av a1">TJ</span>T. Jansen</span></td><td><span class="bar-s"></span><span class="mono">18:25</span></td><td><span class="st ok">Loading</span></td></tr></tbody></table>
+        <div class="map"><svg viewBox="0 0 330 318" aria-hidden="true">
+  <rect width="330" height="318" fill="#E9EEEA"/>
+  <path d="M0 196 C60 180 96 214 150 206 C206 198 236 168 330 176 L330 214 C246 206 214 238 152 244 C92 250 58 222 0 232Z" fill="#CFE0E8"/>
+  <path d="M206 236 l40 -8 l18 40 l-46 12Z M40 70 l50 -10 l14 34 l-52 12Z M240 40 l46 6 l-6 40 l-44 -8Z" fill="#DCE8DD"/>
+  <g fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round">
+    <path d="M0 120 H330 M0 280 C80 270 200 296 330 284 M110 0 V318 M226 0 V318 M0 40 C90 60 200 20 330 34 M60 0 L150 318 M290 0 L250 318"/>
+    <path d="M0 160 H140 M170 90 H330 M150 250 L300 300" stroke-width="1.4"/>
+  </g>
+  <g fill="none" stroke-linecap="round">
+    <path d="M30 0 C40 80 20 160 34 318" stroke="#E2CF9F" stroke-width="6"/>
+    <path d="M30 0 C40 80 20 160 34 318" stroke="#F3E3B6" stroke-width="4"/>
+    <path d="M0 92 C120 84 220 104 330 96" stroke="#E2CF9F" stroke-width="6"/>
+    <path d="M0 92 C120 84 220 104 330 96" stroke="#F3E3B6" stroke-width="4"/>
+    <path d="M300 0 C290 120 312 200 296 318" stroke="#E2CF9F" stroke-width="6"/>
+    <path d="M300 0 C290 120 312 200 296 318" stroke="#F3E3B6" stroke-width="4"/>
+  </g>
+  <g font-family="Familjen Grotesk,sans-serif" font-size="8" fill="#8A949B">
+    <text x="40" y="22">A13</text><text x="270" y="86">A20</text><text x="306" y="300">A16</text><text x="10" y="300">A15</text>
+    <text x="170" y="226" font-style="italic" fill="#7FA0B2">Nieuwe Maas</text>
+  </g>
+  <path d="M150 150 C190 130 230 110 300 60 L330 30" fill="none" stroke="#0A4367" stroke-width="2.4" stroke-linecap="round"/>
+  <path d="M150 150 C120 180 80 250 34 300 L20 318" fill="none" stroke="#0A4367" stroke-width="2.4" stroke-linecap="round" stroke-dasharray="1 5"/>
+  <path d="M150 150 C200 160 260 140 330 140" fill="none" stroke="#2E7D3A" stroke-width="2.4" stroke-linecap="round"/>
+  <rect x="140" y="140" width="20" height="20" rx="4" fill="#0E2433"/><text x="150" y="153.5" font-family="Familjen Grotesk,sans-serif" font-size="8.5" font-weight="600" fill="#fff" text-anchor="middle">R</text>
+  <g stroke="#fff" stroke-width="2"><circle cx="268" cy="80" r="5.5" fill="#0A4367"/><circle cx="96" cy="228" r="5.5" fill="#0A4367"/><circle cx="240" cy="146" r="5.5" fill="#2E7D3A"/><circle cx="168" cy="166" r="5.5" fill="#C0473A"/><circle cx="312" cy="138" r="5.5" fill="#2E7D3A"/></g>
+  <g transform="translate(176 176)"><rect width="82" height="22" rx="5" fill="#fff" stroke="rgba(14,36,51,.15)"/><circle cx="10" cy="11" r="3" fill="#C0473A"/><text x="18" y="14.5" font-family="Familjen Grotesk,sans-serif" font-size="8.5" font-weight="600" fill="#0E2433">NL-61-TRM held</text></g>
+</svg><div class="zoom"><span>+</span><span>−</span></div><div class="legend"><span><i style="background:#0A4367"></i>In transit 1,204</span><span><i style="background:#2E7D3A"></i>Loaded 388</span><span><i style="background:#C0473A"></i>Held 1</span></div></div>
       </div>
     </div>
-  </article>
+  </div>
+</div></div>
+    </a>
+  </div>
 </section>
 </main>
+
 <section class="contact" id="contact" aria-labelledby="ct-h">
   <div class="wrap">
-    <div>
+    <div class="l">
       <h2 class="d2" id="ct-h">Tell us about your product.</h2>
       <p>Describe what you have and where it hurts. Shoaib, our founder, replies within one working day with honest next steps — even if the answer is that you don't need us.</p>
       <div class="direct">
         <div><small>Email</small><a href="mailto:info@reallybeyond.com">info@reallybeyond.com</a></div>
-        <div><small>WhatsApp and Telegram</small><a href="tel:+923484660336">+92 348 466 0336</a></div>
-        <div><small>Where we work</small>Remotely, with clients in five countries</div>
+        <div><small>WhatsApp, Telegram</small><a href="tel:+923484660336">+92 348 466 0336</a></div>
+        <div><small>Where we work</small><span>Remotely, with clients in five countries</span></div>
       </div>
     </div>
     <form id="cf" novalidate>
@@ -183,8 +241,16 @@
 
 <footer class="foot">
   <div class="wrap">
-    <span>© 2026 ReallyBeyond. Software development, remote worldwide.</span>
-    <span>Concept by Matt for ReallyBeyond — 2 Oct 2026. Sample content; not licensed for use until contract</span>
+    <div class="grid">
+      <div class="fb"><a class="brand" href="index.html"><svg aria-hidden="true"><use href="#rb"/></svg>ReallyBeyond</a><p>Long-term engineering partner for software products that businesses already depend on.</p></div>
+      <nav aria-label="Work"><b>Work</b><a href="case-study.html">Dispatch platform</a><a href="case-study-2.html">Trade ordering</a></nav>
+      <nav aria-label="Company"><b>Company</b><a href="index.html#services">Services</a><a href="index.html#approach">How we work</a><a href="index.html#clients">Clients</a></nav>
+      <nav aria-label="Contact"><b>Contact</b><a href="mailto:info@reallybeyond.com">Email</a><a href="tel:+923484660336">WhatsApp</a><a href="tel:+923484660336">Telegram</a></nav>
+    </div>
+    <div class="legal">
+      <span>© 2026 ReallyBeyond. Software development, remote worldwide.</span>
+      <span>Concept by Matt for ReallyBeyond — 2 Oct 2026. Sample content; not licensed for use until contract</span>
+    </div>
   </div>
 </footer>
 
