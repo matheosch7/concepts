@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head><meta name="concept-job" content="up-2104323857664377965"><meta name="robots" content="noindex,nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Snoozecard video 1 — first cut and script</title>
+<meta name="description" content="First cut of Snoozecard promo video 1 (the problem everyone knows): 18.8 s, 9:16, kinetic type, female voiceover, with the script as a draft for approval.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Inria+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#FAF9F5;--ink:#0F0F0F;--green:#3EAE7E;--green-ink:#1E6B4A;--sand:#E0DACE;--line:#E7E1D5;--muted:#5E5B55;--card:#171717}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--cream);color:var(--ink);font-family:"Geist",system-ui,sans-serif;font-size:17px;line-height:1.55}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--green);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 32px}
+header{display:flex;align-items:center;gap:14px;padding:28px 0}
+.logo{width:40px;height:40px;border-radius:9px;background:var(--ink);position:relative;flex:none}
+.logo i{position:absolute;left:50%;height:6px;border-radius:3px}
+.logo .a{top:13px;width:14px;margin-left:-7px;background:#F7F4EE}
+.logo .b{top:19px;width:22px;margin-left:-11px;background:var(--green)}
+.logo .c{top:25px;width:14px;margin-left:-7px;background:#fff}
+header .name{font-weight:600;font-size:20px;letter-spacing:-0.02em}
+header .for{margin-left:auto;color:var(--muted);font-size:15px}
+
+.hero{display:grid;grid-template-columns:minmax(0,400px) minmax(0,1fr);gap:64px;align-items:start;padding:24px 0 72px}
+.player{position:sticky;top:24px}
+.phone{background:var(--card);border-radius:28px;padding:10px;border:1px solid #2a2a2a}
+.phone video{display:block;width:100%;aspect-ratio:9/16;border-radius:20px;background:var(--cream)}
+.spec{margin-top:14px;font-size:14px;color:var(--muted)}
+h1{font-family:"Inria Serif",Georgia,serif;font-weight:700;font-size:clamp(40px,5vw,62px);line-height:1.04;letter-spacing:-0.02em;max-width:14ch}
+.lede{margin-top:20px;font-size:19px;max-width:56ch}
+.status{margin-top:26px;display:flex;gap:12px;align-items:flex-start;padding:16px 18px;border:1px solid var(--line);border-radius:12px;background:#fff;max-width:60ch;font-size:16px}
+.status b{flex:none;width:12px;height:12px;border-radius:50%;background:var(--green);margin-top:6px}
+
+h2{font-family:"Inria Serif",Georgia,serif;font-weight:700;font-size:34px;line-height:1.1;letter-spacing:-0.015em}
+.sub{color:var(--muted);margin-top:8px;max-width:62ch}
+.script{margin-top:40px}
+table{width:100%;border-collapse:collapse;margin-top:20px}
+th{text-align:left;font-weight:500;font-size:14px;color:var(--muted);padding:0 14px 10px 0;border-bottom:1px solid var(--ink)}
+td{vertical-align:top;padding:16px 14px 16px 0;border-bottom:1px solid var(--line)}
+td.t{font-variant-numeric:tabular-nums;color:var(--muted);white-space:nowrap;font-size:15px;width:96px}
+td.vo{font-family:"Inria Serif",Georgia,serif;font-size:21px;line-height:1.3;width:42%}
+td.os{font-size:15px;color:#2b2a27}
+.fixed{display:inline-block;margin-left:6px;font-family:"Geist",sans-serif;font-size:12px;font-weight:500;color:var(--green-ink);border:1px solid var(--green);border-radius:6px;padding:0 6px;vertical-align:3px}
+.count{margin-top:14px;font-size:15px;color:var(--muted)}
+
+.frames{padding:72px 0;border-top:1px solid var(--line)}
+.strip{margin-top:28px;display:grid;grid-template-columns:repeat(6,1fr);gap:16px}
+.strip figure{margin:0}
+.strip img{display:block;width:100%;height:auto;aspect-ratio:9/16;object-fit:cover;border-radius:12px;border:1px solid var(--line);background:#fff}
+.strip figcaption{margin-top:10px;font-size:14px;color:var(--muted);line-height:1.4}
+.strip figcaption span{display:block;color:var(--ink);font-weight:500}
+
+.next{padding:72px 0;border-top:1px solid var(--line);display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.next ul{list-style:none;margin-top:18px}
+.next li{padding:14px 0;border-bottom:1px solid var(--line);max-width:52ch}
+.next li strong{font-weight:600}
+footer{padding:28px 0 44px;border-top:1px solid var(--line);font-size:14px;color:var(--muted);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+@media (max-width:900px){
+  .hero{grid-template-columns:1fr;gap:40px}
+  .player{position:static;max-width:340px}
+  .strip{grid-template-columns:repeat(3,1fr)}
+  .next{grid-template-columns:1fr;gap:24px}
+}
+@media (max-width:560px){
+  .wrap{padding:0 16px}
+  header .for{display:none}
+  .player{max-width:none}
+  table,tbody,tr,td{display:block;width:100%}
+  thead{display:none}
+  tr{padding:14px 0;border-bottom:1px solid var(--line)}
+  td{border:0;padding:2px 0}
+  td.vo{width:auto}
+  td.t{width:auto}
+  .strip{grid-template-columns:repeat(2,1fr)}
+}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <span class="logo" aria-hidden="true"><i class="a"></i><i class="b"></i><i class="c"></i></span>
+    <span class="name">Snoozecard</span>
+    <span class="for">Promo video 1, first cut</span>
+  </header>
+
+  <section class="hero">
+    <div class="player">
+      <div class="phone">
+        <video src="demo.mp4" poster="assets/poster.jpg" controls playsinline preload="metadata" aria-label="Snoozecard promo video 1, first cut, 18.8 seconds"></video>
+      </div>
+      <p class="spec">18.8 seconds, built as a 1080×1920 master at 30 fps. This preview is 720p and watermarked.</p>
+    </div>
+
+    <div>
+      <h1>The problem everyone knows.</h1>
+      <p class="lede">Video 1 opens on your hook and ends on your line. The voiceover is a natural female voice, every spoken word lands on screen as it's said, and the Snoozecard card is the only object on stage: it falls asleep and the day-30 charge bounces off it. No app, no phone screens.</p>
+      <div class="status"><b aria-hidden="true"></b><p>The script below is a draft for your approval. Nothing is final until you sign it off; edit any line and I'll re-voice and re-time it.</p></div>
+
+      <div class="script">
+        <h2>Script</h2>
+        <p class="sub">47 words. Voiceover ends at 16.9 s, then the end card holds.</p>
+        <table>
+          <thead><tr><th scope="col">Time</th><th scope="col">Voiceover</th><th scope="col">On screen</th></tr></thead>
+          <tbody>
+            <tr><td class="t">0.0–3.8 s</td><td class="vo">Everyone has been charged for a free trial they forgot to cancel.<span class="fixed">your hook</span></td><td class="os">The hook builds word by word in Inria Serif over a "30-day free trial" tag whose ring ticks down. On "forgot" the tag tips over and drops out of frame.</td></tr>
+            <tr><td class="t">3.9–4.8 s</td><td class="vo">You meant to.</td><td class="os">A note to self: "Cancel streaming trial, before day 30". The box never gets ticked.</td></tr>
+            <tr><td class="t">4.9–7.7 s</td><td class="vo">Day thirty came, and so did the charge.</td><td class="os">A day counter rolls 1 to 30 across a month strip. A big "$14.99 charged" notification slams onto the month and shakes the frame.</td></tr>
+            <tr><td class="t">7.7–12.3 s</td><td class="vo">Snoozecard gives each trial a virtual card that ends when you decide.</td><td class="os">Your logo's three bars sweep across the frame. The Snoozecard card springs up; its end date rolls to Day 29.</td></tr>
+            <tr><td class="t">12.3–14.6 s</td><td class="vo">Trial ends. Charge declined.</td><td class="os">We push in on the card: its logo bars become eyes and blink shut, z z z. The same charge flies in, hits the sleeping card, bounces off and gets stamped Declined.</td></tr>
+            <tr><td class="t">14.6–18.8 s</td><td class="vo">Join the waitlist at snoozecard.com.<span class="fixed">your line</span></td><td class="os">The closed eyes fly out of the card and become your logo, which wakes up (bars open). Wordmark, the line, a full-width green snoozecard.com button, and "Your free trials end when you decide."</td></tr>
+          </tbody>
+        </table>
+        <p class="count">Merchant and card details are generic on purpose: no real streaming brands, no network logos, nothing beyond what your site already says.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="frames" aria-labelledby="sf">
+    <h2 id="sf">Frames from the cut</h2>
+    <p class="sub">Your cream, ink and green, Inria Serif for every spoken line, Geist on the objects, and your card design from the site.</p>
+    <div class="strip">
+      <figure><img src="assets/f1.jpg" alt="Hook in large serif type: Everyone has been charged for a free trial they forgot to cancel." loading="lazy" width="540" height="960"><figcaption><span>Hook</span>0:03</figcaption></figure>
+      <figure><img src="assets/f2.jpg" alt="A sand-coloured note: Cancel streaming trial, before day 30, with an empty checkbox." loading="lazy" width="540" height="960"><figcaption><span>You meant to</span>0:04</figcaption></figure>
+      <figure><img src="assets/f3.jpg" alt="Day 30 counter over a month strip, with a $14.99 charged notification." loading="lazy" width="540" height="960"><figcaption><span>The charge</span>0:07</figcaption></figure>
+      <figure><img src="assets/f4.jpg" alt="The dark Snoozecard virtual card with its end date set to Day 29." loading="lazy" width="540" height="960"><figcaption><span>Its own card</span>0:12</figcaption></figure>
+      <figure><img src="assets/f5.jpg" alt="The sleeping card under a $14.99 notification stamped Declined." loading="lazy" width="540" height="960"><figcaption><span>Declined</span>0:14</figcaption></figure>
+      <figure><img src="assets/f6.jpg" alt="End card: Snoozecard logo, Join the waitlist at snoozecard.com." loading="lazy" width="540" height="960"><figcaption><span>End card</span>0:17</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="next">
+    <div>
+      <h2>Before the final</h2>
+      <ul>
+        <li><strong>Script sign-off.</strong> Approve or edit the lines above.</li>
+        <li><strong>Format.</strong> Built as a 9:16 master for Reels and TikTok. A 1:1 or 16:9 version is a reframe, not a rebuild.</li>
+        <li><strong>Music.</strong> The bed in this cut is temporary. The final uses a licensed track, or one you pick.</li>
+        <li><strong>Voice.</strong> This is "Hazel", warm and unhurried. Happy to send two alternatives with the final script.</li>
+      </ul>
+    </div>
+    <div>
+      <h2>What you get</h2>
+      <ul>
+        <li>The clean 1080×1920 master (no watermark), 30 fps MP4.</li>
+        <li>A captions file (.srt) for sound-off viewing.</li>
+        <li>The voiceover as a separate audio file.</li>
+        <li>One revision round on the finished cut.</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <span>Concept by Matt for Snoozecard, 3 Oct 2026. Not licensed for use until contract.</span>
+    <span>Temp music. Logo rebuilt from snoozecard.com for this draft.</span>
+  </footer>
+</div>
+</body>
+</html>
